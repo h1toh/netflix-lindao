@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanucoflix</title>
+    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/free-netflix-3521600-2945044.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href=""><img src="https://fontmeme.com/permalink/250726/e7836d50d46e4e262fc32a1f701d9a51.png" alt="Logo Nanucoflix" width="100px"></a>
+        </div>
+        <nav>
+            <a href="">Início</a>
+            <a href="">Séries</a>
+            <a href="">Filmes</a>
+            <a href="">Minha Lista</a>
+        </nav>
+    </header>
+    <section class="banner">
+        <div class="conteudo">
+            <p class="titulo"> Julli e Lucas </p>
+            <p class="detalhes">
+                <span>2 de Fevereiro de 2025 - 1ª Temporada</span>
+                <span class="stars">
+                    <i class="fa-solid fa-star" style="color: yellow;"></i>
+                    <i class="fa-solid fa-star" style="color: yellow;"></i>
+                    <i class="fa-solid fa-star" style="color: yellow;"></i>
+                    <i class="fa-solid fa-star" style="color: yellow;"></i>
+                    <i class="fa-solid fa-star" style="color: yellow;"></i>
+                </span>
+            <p class="descricao">
+                No final de outubro, duas almas com o mesmo caos bonito se encontraram.
+                Julli e Lucas: como um som do Tyler, The Creator - intensa, diferente, cheia de sentimento e com um
+                estilo que ninguém copia.
+                Eles não precisaram de trilha sonora pronta, criaram a própria.
+                Entre conversas pronfudas, piadas idiotas, e aqueles silêncios confortáveis que só quem ama entende,
+                nasceu algo raro.
+                Um amor que combina pipoca no fim do dia e sushi quando o coração pede conforto.
+                Ela, com o sorriso apaixonante.
+                Ele, com o olhar que entende.
+                Juntos, são uma vibe difícil de explicar, mas impossível de ignorar.
+                Não tem roteiro.
+                Não tem pose.
+                Só tem eles - vivendo o tipo de amor que a gente sente na pele, no peito e até no silêncio da madrugada.
+            </p>
+            <div class="botoes">
+                <button> <i class="fa-solid fa-play"></i> Continuar </button>
+                <button id="fav" onclick="girar()" style="background-color: rgba(143, 143, 143, 0.877); color: white;"> <i class="fa-solid fa-plus"
+                        style="color: white;"></i> Favorito </button>
+            </div>
+            </p>
+        </div>
+    </section>
+
+    <section class="momentos">
+        <h2>Screenshots da série</h2>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> <img src="./images/1.JPG" alt=""> </div>
+                <div class="swiper-slide"> <img src="./images/3.JPG" alt=""> </div>
+                <div class="swiper-slide"> <img src="./images/4.JPG" alt=""> </div>
+                <div class="swiper-slide"> <img src="./images/6.jpg" alt=""> </div>
+                <div class="swiper-slide"> <img src="./images/7.jpg" alt=""> </div>
+                <div class="swiper-slide"> <img src="./images/10.jpg" alt=""> </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        Feito por lukashi
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: true
+            },
+            slidesPerView: 5,
+            spaceBetween: 20,
+            breakpoints: {
+                600: {
+                    loop: true,
+                    slidesPerView: 5,
+                    spaceBetween: 10
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

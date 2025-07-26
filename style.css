@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.fa-plus {
+    transition: 0.4s ease-in-out;
+}
+
+.cabecalho {
+    background-color: #000000;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.cabecalho nav {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.cabecalho nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.cabecalho nav a:hover {
+    color: rgb(204, 204, 204);
+}
+
+.banner {
+    position: relative;
+    background: url(./images/background.jpg) no-repeat center center/cover;
+    padding: 120px 1rem 2rem;
+}
+
+.banner::after {
+    content: '';
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.253), rgba(0, 0, 0, 0.856));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.conteudo {
+    position: relative;
+    max-width: 100%;
+    color: white;
+    z-index: 2;
+}
+
+.titulo {
+    font-family: "Great Vibes", cursive;
+    font-size: 70px;
+    margin: 0;
+}
+
+.detalhes {
+    margin: 10px 0;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.descricao {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+.botoes button {
+    font-weight: 600;
+    background: #fff;
+    color: black;
+    border: none;
+    padding: 10px 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.1s ease-in-out;
+}
+
+.botoes button:hover {
+    scale: 1.06;
+}
+
+.momentos {
+    padding: 1.5rem 1rem;
+}
+
+.momentos h2 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.swiper {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.swiper-slide {
+    width: auto !important;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 200px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+@media(min-width: 900px) {
+    .swiper-slide img {
+        width: 500px;
+    }
+
+    .descricao {
+        width: 50%;
+    }
+
+    .banner::after {
+        content: '';
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.253), rgba(0, 0, 0, 0.836));
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
