@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanucoflix</title>
-    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/free-netflix-3521600-2945044.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/free-netflix-3521600-2945044.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -17,7 +18,8 @@
 <body>
     <header class="cabecalho">
         <div class="logo">
-            <a href=""><img src="https://fontmeme.com/permalink/250726/e7836d50d46e4e262fc32a1f701d9a51.png" alt="Logo Nanucoflix" width="100px"></a>
+            <a href=""><img src="https://fontmeme.com/permalink/250726/e7836d50d46e4e262fc32a1f701d9a51.png"
+                    alt="Logo Nanucoflix" width="100px"></a>
         </div>
         <nav>
             <a href="">Início</a>
@@ -55,8 +57,8 @@
             </p>
             <div class="botoes">
                 <button> <i class="fa-solid fa-play"></i> Continuar </button>
-                <button id="fav" onclick="girar()" style="background-color: rgba(143, 143, 143, 0.877); color: white;"> <i class="fa-solid fa-plus"
-                        style="color: white;"></i> Favorito </button>
+                <button id="fav" onclick="girar()" style="background-color: rgba(143, 143, 143, 0.877); color: white;">
+                    <i class="fa-solid fa-heart" style="color: white;"></i> Favorito </button>
             </div>
             </p>
         </div>
@@ -76,8 +78,60 @@
             </div>
         </div>
     </section>
+
+    <section class="personagens">
+        <h2>Personagens principais</h2>
+
+        <div class="sobre">
+            <div class="julli">
+                <div class="julli-sobre-cima">
+                    <div class="julli-foto">
+                        <img class="img julli-img2" src="./images/julli_2.png" alt="">
+                        <img class="img julli-img1" src="./images/julli_1.png" alt="">
+                    </div>
+                    <div class="julli-info">
+                        <h1 class="julli-titulo">Julli Ribeiro</h1>
+                    </div>
+                </div>
+                <div class="julli-info2">
+                    <p class="julli-desc">Julli é movimento. <br> Ela entra em cena como quem já conhece o palco:
+                        rindo alto, dançando sem roteiro e iluminando tudo por onde passa. É muito carismática, dona
+                        de um charme inquieto e de uma energia que é impossível ignorar. Vive no ritmo próprio,
+                        entre fotos bem tiradas, poses espontâneas e outfits que parecem ter saído direto um
+                        editorial de moda underground. Linda de um jeito que vai além do visual - é linda de
+                        espírito, presença, de alma leve. Gosta de sushi, de cachorros salsicha e do caos organizado
+                        que é ser fã de Tyler, The Creator. Julli é aquela que transforma a vida em algo mais
+                        bonito simplesmente por estar nela. Ela não passa por momentos - ela os cria. E ser amada
+                        por ela é como dançar no meio de uma tempestade de brilho </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sobre">
+            <div class="lucas">
+                <div class="lucas-sobre-cima">
+                    <div class="lucas-foto">
+                        <img class="img lucas-img2" src="./images/lucas_2.png" alt="">
+                        <img class="img lucas-img1" src="./images/lucas_1.png" alt="">
+                    </div>
+                    <div class="lucas-info">
+                        <h1 class="lucas-titulo">Lucas Gomes</h1>
+                    </div>
+                </div>
+                <div class="lucas-info2">
+                    <p class="lucas-desc">Lucas é serenidade. <br> Um programador que exerga poesia no código, um
+                        beatmaker que encontra melodia no silêncio. Ele pensa, sente e cria com a mesma delicadeza com
+                        que faz panquecas no domingo. Se interessa por tudo, se apaixona por aprender e se entrega ao
+                        que ama com carinho que dá vontade de guardar num potinho. Tem estilo próprio - daqueles que
+                        vestem mais que roupa: vestem identidade. Numa vibe Tyler, The Creator + Kendrick Lamar, sempre
+                        em busca da própria evolução, nunca parado, nunca igual. Lucas é aquele que não só te escuta,
+                        mas que te entende. O tipo raro de pessoa que transforma amor em linguagem fluente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
-        Feito por lukashi
+        <span>Feito por <a style="color: white;" href="https://github.com/h1toh">Lucas Gomes</a></span>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
