@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Quiz</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: #fff;
+            padding: 30px;
+        }
+
+        .pergunta {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+            gap: 20px;
+        }
+
+        button{
+            border: none;
+            height: 60px;
+            width: 200px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        a{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a title="Voltar" href="./index.html"><i style="padding: 20px 0; cursor: pointer;" class="fa-solid fa-arrow-left"></i></a>
+
+    <div class="titulo">
+        <h1>Tenho um quiz para você</h1>
+    </div>
+
+    <section class="container">
+
+        <div class="pergunta" id="p1">
+            <span style="display: flex; align-items: center; gap: 10px; ">
+                <h2>1 - Quando eu pedi permissão para te namorar?</h2>
+                <h2 style="color: rgb(0, 255, 0); font-size: 17px;">Fácil</h2>
+            </span>
+            <label><input type="radio" name="p1" value="a"> 02/04/2025</label>
+            <label><input type="radio" name="p1" value="b"> 02/01/2025</label>
+            <label><input type="radio" name="p1" value="c"> 02/03/2025</label>
+            <label><input type="radio" name="p1" value="d"> 02/02/2025</label>
+        </div>
+
+        <div class="pergunta" id="p2">
+            <span style="display: flex; align-items: center; gap: 10px; ">
+                <h2>2 - Qual a minha comida favorita?</h2>
+                <h2 style="color: rgb(0, 255, 0); font-size: 17px;">Fácil</h2>
+            </span>
+            <label><input type="radio" name="p2" value="a"> Sushi</label>
+            <label><input type="radio" name="p2" value="b"> Strogonoff de Frango</label>
+            <label><input type="radio" name="p2" value="c"> Batata Frita</label>
+            <label><input type="radio" name="p2" value="d"> Panqueca</label>
+        </div>
+
+        <div class="pergunta" id="p3">
+            <span style="display: flex; align-items: center; gap: 10px; ">
+                <h2>3 - Qual o meu artista favorito?</h2>
+                <h2 style="color: rgb(255, 251, 0); font-size: 17px;">Médio</h2>
+            </span>
+            <label><input type="radio" name="p3" value="a"> Tyler, The Creator</label>
+            <label><input type="radio" name="p3" value="b"> Kendrick Lamar</label>
+            <label><input type="radio" name="p3" value="c"> Playboi Carti</label>
+            <label><input type="radio" name="p3" value="d"> Virgingod</label>
+        </div>
+
+        <div class="pergunta" id="p4">
+            <span style="display: flex; align-items: center; gap: 10px; ">
+                <h2>4 - Tendo a equação: 4(2x−3)+5=3(x+4)+2x, qual é o valor de x?</h2>
+                <h2 style="color: rgb(255, 251, 0); font-size: 17px;">Médio</h2>
+            </span>
+            <label><input type="radio" name="p4" value="a"> 17/3</label>
+            <label><input type="radio" name="p4" value="b"> 19/3</label>
+            <label><input type="radio" name="p4" value="c"> 20/3</label>
+            <label><input type="radio" name="p4" value="d"> 3/22</label>
+        </div>
+
+        <div class="pergunta" id="p5">
+            <span style="display: flex; align-items: center; gap: 10px; ">
+                <h2>5 - 在一个多个物体连接并一起加速的系统中，为什么即使加速度相同，绳子中不同位置的拉力也不相同？</h2>
+                <h2 style="color: rgb(255, 0, 0); font-size: 17px;">Dificil</h2>
+            </span>
+            <label><input type="radio" name="p5" value="a"> 因为绳子的拉力仅取决于作用在第一个物体上的力</label>
+            <label><input type="radio" name="p5" value="b"> 因为拉力取决于绳子需要加速的物体总质量</label>
+            <label><input type="radio" name="p5" value="c"> 因为物体在绳子的不同点上的加速度不同</label>
+            <label><input type="radio" name="p5" value="d"> 因为牛顿定律不适用于多个物体连接的系统</label>
+        </div>
+
+        <button onclick="verificarRespostas()">Ver Resultado</button>
+        <div class="resultado" id="resultado"></div>
+
+        <br>
+
+        <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2023/10/09/1395947931-salsicha.jpg" alt="" style="height: 300px; transition: 10s ease-in-out;">
+
+
+    </section>
+
+    <script>
+        function verificarRespostas() {
+            const respostaP1 = document.querySelector('input[name="p1"]:checked')
+            const respostaP2 = document.querySelector('input[name="p2"]:checked')
+            const respostaP3 = document.querySelector('input[name="p3"]:checked')
+            const respostaP4 = document.querySelector('input[name="p4"]:checked')
+            const respostaP5 = document.querySelector('input[name="p4"]:checked')
+            const resultado = document.getElementById('resultado')
+
+            if (!respostaP1 || !respostaP2 || !respostaP3 || !respostaP4 || !respostaP5) {
+                alert('Por favor, responda todas as perguntas!')
+                return
+            }
+
+            if (respostaP1.value === "c" && respostaP2.value === "d" && respostaP3.value === "a" && respostaP4.value === "b" && respostaP4.value === "b") {
+                resultado.textContent = 'acertou mozao'
+                const img = document.querySelector("img")
+                img.style.rotate = "23929deg"
+                setTimeout(() => {
+                    img.style.marginTop = "-2000px"
+                }, 3000);
+            } else {
+                resultado.innerHTML = 'burra, tenta dnv <br> <a href="./quiz.html">Tentar Denovo</a>'
+            }
+
+        }
+    </script>
+</body>
+
+</html>

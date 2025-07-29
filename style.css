@@ -96,11 +96,10 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    transition: 0.1s ease-in-out;
 }
 
 .botoes button:hover {
-    scale: 1.06;
+    opacity: 0.7;
 }
 
 .momentos {

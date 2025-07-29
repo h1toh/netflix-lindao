@@ -18,14 +18,14 @@
 <body>
     <header class="cabecalho">
         <div class="logo">
-            <a href=""><img src="https://fontmeme.com/permalink/250726/e7836d50d46e4e262fc32a1f701d9a51.png"
+            <a href=""><img src="./images/nanucoflix.png"
                     alt="Logo Nanucoflix" width="100px"></a>
         </div>
         <nav>
             <a href="">Início</a>
             <a href="">Séries</a>
             <a href="">Filmes</a>
-            <a href="">Minha Lista</a>
+            <a href="./quiz.html">???</a>
         </nav>
     </header>
     <section class="banner">
@@ -56,9 +56,11 @@
                 Só tem eles - vivendo o tipo de amor que a gente sente na pele, no peito e até no silêncio da madrugada.
             </p>
             <div class="botoes">
-                <button> <i class="fa-solid fa-play"></i> Continuar </button>
-                <button id="fav" onclick="girar()" style="background-color: rgba(143, 143, 143, 0.877); color: white;">
-                    <i class="fa-solid fa-heart" style="color: white;"></i> Favorito </button>
+                <button id="play"> <i class="fa-solid fa-play"></i> Começar </button>
+                <button id="fav" onclick="favoritar()" style="background-color: rgba(143, 143, 143, 0.877); color: white;">
+                    <i class="fa-solid fa-heart" style="color: white; transition: 0.1s ease-in-out;"></i> Favorito </button>
+                <button id="fav" onclick="rolarParaBaixo()" style="background-color: rgba(143, 143, 143, 0.877); color: white;">
+                    <i class="fa-solid fa-users" style="color: white;"></i></button>
             </div>
             </p>
         </div>
@@ -83,7 +85,7 @@
         <h2>Personagens principais</h2>
 
         <div class="sobre">
-            <div class="julli">
+            <div id="julli" class="julli">
                 <div class="julli-sobre-cima">
                     <div class="julli-foto">
                         <img class="img julli-img2" src="./images/julli_2.png" alt="">
